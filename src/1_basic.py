@@ -2,12 +2,14 @@
 Getting started;
 
 1. pip3 install virtualenv
-2. python3 -m virtualenv env
-3. source env/bin/activate
+2. python3 -m virtualenv env (setup virual environment))
+3. source env/bin/activate (source into it, 'deactivate' in terminal to exit)
 4. pip3 install flask
-5. pip freeze > requirements.txt
-6. pip install -r requirements.txt (for future ref)
-7. export FLASK_APP=basic.py && flask run (to start server)
+5. pip3 freeze > requirements.txt
+6. pip3 install -r requirements.txt (for future ref)
+7. export FLASK_APP=1_basic.py && flask run (to start server; '&&' runs both commands)
+
+What you can also do is run 'export FLASK_APP={your_file.py}' to point your FLASK_APP to some file, and then you can just run 'flask run'
 """
 
 from flask import Flask
@@ -18,11 +20,12 @@ def test():
     return 'Running!'
 
 
-@app.route('/basic')  # adding another route
+@app.route('/basic')  # adding another route, using inline HTML
 def basic_page():
     return '<h2>Inline HTML!</h2>'
 
 
 @app.route('/<parameter>')  # what you write here...
-def print_name(parameter):  # you also write here
+def print_name(parameter):  # ...you also write here (mismatching makes this break)
     return f'Hello, {parameter}!'
+    
