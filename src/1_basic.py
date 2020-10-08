@@ -28,4 +28,8 @@ def basic_page():
 @app.route('/<parameter>')  # what you write here...
 def print_name(parameter):  # ...you also write here (mismatching makes this break)
     return f'Hello, {parameter}!'
-    
+
+
+@app.route('/<non_existent>')
+def test_redirect_with_param(non_existent):
+    return f'Page "{non_existent}" doesn"t exist!'
