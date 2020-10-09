@@ -1,5 +1,7 @@
 """
 Rendering a .html file inside of Flask.
+
+'export FLASK_APP=3_html_templates.py && flask run'
 """
 
 from flask import Flask, render_template

@@ -9,7 +9,9 @@ Getting started;
 6. pip3 install -r requirements.txt (for future ref)
 7. export FLASK_APP=1_basic.py && flask run (to start server; '&&' runs both commands)
 
-What you can also do is run 'export FLASK_APP={your_file.py}' to point your FLASK_APP to some file, and then you can just run 'flask run'
+You can also run 'export FLASK_APP={your_file.py}' to point your FLASK_APP to some file, and then you can run 'flask run'
+
+(Make sure you're sourced into your virtualenv, this is where Flask is actually installed)
 """
 
 from flask import Flask
